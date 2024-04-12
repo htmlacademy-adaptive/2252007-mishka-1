@@ -1,7 +1,7 @@
-# Личный проект «Мишка» 
+# Личный проект «Мишка»
 
-* Студент: [Nataliya Malikova](https://up.htmlacademy.ru/adaptive-individual/1/user/2252007).
-* Наставник: `Неизвестно`.
+- Студент: [Nataliya Malikova](https://up.htmlacademy.ru/adaptive-individual/1/user/2252007).
+- Наставник: [Екатерина Комнатная](https://htmlacademy.ru/profile/id215761).
 
 ---
 
