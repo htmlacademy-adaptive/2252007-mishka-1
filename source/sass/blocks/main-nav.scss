@@ -53,6 +53,26 @@
   position: relative;
 }
 
+// .main-nav__box-link::before {
+//   content: "";
+//   position: absolute;
+//   top: 13px;
+//   right: 1px;
+//   width: 100%;
+//   height: 1px;
+//   background-color: #ececec;
+// }
+
+// .main-nav__box-link:last-child::after {
+//   content: "";
+//   position: absolute;
+//   top: 13px;
+//   right: 1px;
+//   width: 100%;
+//   height: 1px;
+//   background-color: #ececec;
+// }
+
 .main-nav__box-link svg {
   position: absolute;
   left: 0;
@@ -68,7 +88,7 @@
   .main-nav__toggle {
     position: absolute;
     top: -1px;
-    right: 29px;
+    right: 69px;
     // z-index: 2;
     display: block;
     width: 20px;
