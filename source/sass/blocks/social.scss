@@ -1,0 +1,22 @@
+.social__list {
+  width: 142px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 27px;
+  padding-bottom: 24px;
+  list-style: none;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -59px;
+    top: 80px;
+    width: 260px;
+    height: 1px;
+    background-color: #e5e5e5;
+  }
+}

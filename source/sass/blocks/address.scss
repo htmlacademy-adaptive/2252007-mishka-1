@@ -1,0 +1,23 @@
+.address {
+  margin-bottom: 42px;
+}
+
+.address-button {
+  width: 189px;
+  border: 2px solid #444444;
+  padding: 14px 36px 14px 35px;
+
+  text-align: center;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin-bottom: 39px;
+  cursor: pointer;
+}
+
+.address-button__link {
+  color: #444444;
+  text-decoration: none;
+}

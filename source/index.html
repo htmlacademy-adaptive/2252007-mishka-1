@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mishka</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
     <!-- Header -->
     <header class="main-header">
-      <div class="main-header__wrapper">
+      <div class="main-header__wrapper container">
         <!-- Nav -->
-        <nav class="main-nav main-nav--closed main-nav--nojs">
+        <nav class="main-nav">
           <div class="main-nav__box main-nav__box--logo">
             <!-- Logo SVG -->
             <a class="main-nav__logo" href="#">
@@ -33,20 +34,26 @@
                 />
               </picture>
             </a>
-            <button
-              class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--nojs"
-              type="button"
-            >
-              <span class="visually-hidden">Открыть меню</span>
-            </button>
           </div>
-          <div class="main-nav__box main-nav__box--catalog">
+          <button
+            class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--nojs"
+            type="button"
+          >
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </nav>
+      </div>
+      <div class="main-nav__list main-nav__list--closed main-nav__list--nojs">
+        <div class="main-nav__box main-nav__box--catalog">
+          <div class="main-nav__wrapper container">
             <a class="main-nav__box-link" href="catalog.html"
               >Каталог товаров</a
             >
             <a class="main-nav__box-link" href="form.html">Вязание на заказ</a>
           </div>
-          <div class="main-nav__box main-nav__box--cart">
+        </div>
+        <div class="main-nav__box main-nav__box--cart">
+          <div class="main-nav__wrapper container">
             <a class="main-nav__box-link" href=""
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -78,16 +85,18 @@
               >Корзина: пока пуста</a
             >
           </div>
-          <div class="main-nav__box main-nav__box--new">
+        </div>
+        <div class="main-nav__box main-nav__box--new">
+          <div class="main-nav__wrapper container">
             <a class="main-nav__box-link" href="">Новые поступления</a>
             <a class="main-nav__box-link" href="">Распродажа</a>
           </div>
-          <div class="main-nav__box main-nav__box--delivery">
-            <span class="main-nav__box-subtitle">
-              Бесплатная доставка по России
-            </span>
-          </div>
-        </nav>
+        </div>
+        <div class="main-nav__box main-nav__box--delivery">
+          <span class="main-nav__box-subtitle">
+            Бесплатная доставка по России
+          </span>
+        </div>
       </div>
     </header>
 
@@ -96,67 +105,65 @@
       <!-- Examples -->
       <section class="examples">
         <div class="examples__wrapper container">
-          <div class="examples__block">
-            <h1 class="examples__block-title">
-              Милые штуки ручной работы для дома
-            </h1>
-            <ul class="examples__list goods-list">
-              <li class="goods-list__item">
-                <a class="goods-list__link" href="">
-                  <p class="goods-list__name">Предметы интерьера</p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="41"
-                    height="62"
-                    viewBox="0 0 41 62"
-                    fill="none"
-                  >
-                    <g opacity="0.5">
-                      <path
-                        d="M15.5024 37.6564C15.1965 38.65 15.2985 39.8423 15.5024 41.2333C16.0124 43.8167 17.2363 47.1949 17.9502 50.8712H23.1517C23.8656 47.2942 25.0895 43.916 25.7014 41.2333C26.0074 39.8423 26.0074 38.5506 25.7014 37.6564C25.3955 36.7622 24.7835 36.0667 23.6616 35.3712H17.5422C16.3184 36.0667 15.7064 36.7622 15.5024 37.6564Z"
-                        fill="#149080"
-                      />
-                      <path
-                        d="M27.5373 57.5282H13.4627C12.1368 57.5282 11.1169 58.5218 11.1169 59.7141V61.9H13.4627H27.5373H29.8831V59.7141C29.8831 58.5218 28.8632 57.5282 27.5373 57.5282Z"
-                        fill="#149080"
-                      />
-                      <path
-                        d="M34.7786 2.1859H22.8458C22.8458 0.99359 21.8259 0 20.5 0C19.1741 0 18.1542 0.99359 18.1542 2.1859H6.22138L0 27.5224C0.81592 27.0256 1.63185 26.5288 2.65175 26.5288C4.07961 26.5288 4.89552 27.3237 5.60945 27.9199C6.32338 28.516 6.83333 28.7147 7.03731 28.7147C7.34328 28.7147 7.85323 28.4167 8.56716 27.9199C9.28109 27.4231 10.199 26.5288 11.5249 26.5288C12.8507 26.5288 13.7687 27.3237 14.4826 27.9199C15.1965 28.4167 15.7065 28.7147 16.0124 28.7147C16.1144 28.7147 16.3184 28.6154 16.6244 28.516C16.8283 28.4167 17.1343 28.1186 17.5423 27.9199C18.0522 27.5224 18.6642 26.9263 19.5821 26.7276C19.8881 26.6282 20.194 26.6282 20.5 26.6282C21.8259 26.6282 22.7438 27.4231 23.4577 28.0192C24.1716 28.516 24.6816 28.8141 24.9876 28.8141C25.2935 28.8141 25.8035 28.516 26.4154 28.0192C27.1293 27.4231 28.0472 26.6282 29.3731 26.6282C30.801 26.6282 31.6169 27.4231 32.3308 28.0192C32.6368 28.3173 32.9428 28.516 33.2487 28.6154C33.4527 28.7147 33.6567 28.8141 33.8607 28.8141C34.1667 28.8141 34.6766 28.516 35.2885 27.9199C36.0025 27.3237 36.9204 26.5288 38.2463 26.5288C39.2662 26.5288 40.0821 27.0256 40.898 27.5224L34.7786 2.1859Z"
-                        fill="#149080"
-                      />
-                      <path
-                        d="M23.9677 53.0571H16.9304C16.2164 53.0571 15.8085 53.5539 15.8085 54.15C15.8085 54.7462 16.3184 55.243 16.9304 55.243H23.9677C24.6816 55.243 25.0896 54.7462 25.0896 54.15C25.1915 53.5539 24.6816 53.0571 23.9677 53.0571Z"
-                        fill="#149080"
-                      />
-                      <path
-                        d="M20.5 28.7141C20.398 28.7141 20.194 28.8135 19.8881 28.9128C19.6841 29.0122 19.4801 29.2109 19.2761 29.3103V32.9865H21.6219V29.4096C21.1119 29.0122 20.704 28.7141 20.5 28.7141Z"
-                        fill="#149080"
-                      />
-                    </g>
-                  </svg>
-                </a>
-              </li>
-              <li class="goods-list__item">
-                <a class="goods-list__link" href="">
-                  <p class="goods-list__name">Детские игрушки</p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="61"
-                    height="61"
-                    viewBox="0 0 61 61"
-                    fill="none"
-                  >
-                    <path
-                      opacity="0.5"
-                      d="M0 44.7265L27.8567 61V37.1527L0 20.7769V44.7265ZM52.155 12.6913V15.25C52.155 17.0923 48.5967 18.6275 44.3267 18.6275C39.955 18.6275 36.4983 17.0923 36.4983 15.25V11.0537C36.8033 12.7936 40.1583 14.2265 44.3267 14.2265C48.6983 14.2265 52.155 12.6913 52.155 10.849C52.155 9.00672 48.5967 7.47148 44.3267 7.47148C44.0217 7.47148 43.615 7.47148 43.31 7.47148L38.2267 4.50337V7.67618C38.2267 9.51846 34.6683 11.0537 30.3983 11.0537C27.6533 11.0537 25.315 10.4396 23.8917 9.51846C23.6883 9.31376 23.485 9.10906 23.18 8.90436C22.7733 8.49496 22.57 8.08557 22.57 7.67618V4.60571L17.69 7.47148C17.385 7.47148 16.9783 7.47148 16.5717 7.47148C12.2 7.47148 8.74334 9.00672 8.74334 10.849C8.74334 12.6913 12.3017 14.2265 16.5717 14.2265C20.74 14.2265 24.095 12.7936 24.4 11.0537V15.25C24.4 17.0923 20.8417 18.6275 16.5717 18.6275C12.2 18.6275 8.74334 17.0923 8.74334 15.25V12.7936L2.64334 16.3758L30.6017 32.7517L58.4583 16.4782L52.155 12.6913ZM38.3283 23.1309C38.3283 24.9732 34.77 26.5084 30.5 26.5084C26.1283 26.5084 22.6717 24.9732 22.6717 23.1309V18.9346C22.9767 20.6745 26.3317 22.1074 30.5 22.1074C34.6683 22.1074 38.0233 20.6745 38.3283 18.9346V23.1309ZM33.1433 37.3574V61L61 44.7265V21.0839L33.1433 37.3574ZM30.3983 6.75504C34.77 6.75504 38.2267 5.2198 38.2267 3.37752C38.2267 1.53524 34.6683 0 30.3983 0C26.0267 0 22.57 1.53524 22.57 3.37752C22.57 5.2198 26.0267 6.75504 30.3983 6.75504Z"
-                      fill="#149080"
-                    />
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <h1 class="examples__title">
+            Милые штуки ручной работы&nbspдля дома
+          </h1>
         </div>
+        <ul class="examples__list goods-list">
+          <li class="goods-list__item">
+            <a class="goods-list__link goods-list__link--lamp" href="">
+              <p class="goods-list__name">Предметы интерьера</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="41"
+                height="62"
+                viewBox="0 0 41 62"
+                fill="none"
+              >
+                <g opacity="0.5">
+                  <path
+                    d="M15.5024 37.6564C15.1965 38.65 15.2985 39.8423 15.5024 41.2333C16.0124 43.8167 17.2363 47.1949 17.9502 50.8712H23.1517C23.8656 47.2942 25.0895 43.916 25.7014 41.2333C26.0074 39.8423 26.0074 38.5506 25.7014 37.6564C25.3955 36.7622 24.7835 36.0667 23.6616 35.3712H17.5422C16.3184 36.0667 15.7064 36.7622 15.5024 37.6564Z"
+                    fill="#149080"
+                  />
+                  <path
+                    d="M27.5373 57.5282H13.4627C12.1368 57.5282 11.1169 58.5218 11.1169 59.7141V61.9H13.4627H27.5373H29.8831V59.7141C29.8831 58.5218 28.8632 57.5282 27.5373 57.5282Z"
+                    fill="#149080"
+                  />
+                  <path
+                    d="M34.7786 2.1859H22.8458C22.8458 0.99359 21.8259 0 20.5 0C19.1741 0 18.1542 0.99359 18.1542 2.1859H6.22138L0 27.5224C0.81592 27.0256 1.63185 26.5288 2.65175 26.5288C4.07961 26.5288 4.89552 27.3237 5.60945 27.9199C6.32338 28.516 6.83333 28.7147 7.03731 28.7147C7.34328 28.7147 7.85323 28.4167 8.56716 27.9199C9.28109 27.4231 10.199 26.5288 11.5249 26.5288C12.8507 26.5288 13.7687 27.3237 14.4826 27.9199C15.1965 28.4167 15.7065 28.7147 16.0124 28.7147C16.1144 28.7147 16.3184 28.6154 16.6244 28.516C16.8283 28.4167 17.1343 28.1186 17.5423 27.9199C18.0522 27.5224 18.6642 26.9263 19.5821 26.7276C19.8881 26.6282 20.194 26.6282 20.5 26.6282C21.8259 26.6282 22.7438 27.4231 23.4577 28.0192C24.1716 28.516 24.6816 28.8141 24.9876 28.8141C25.2935 28.8141 25.8035 28.516 26.4154 28.0192C27.1293 27.4231 28.0472 26.6282 29.3731 26.6282C30.801 26.6282 31.6169 27.4231 32.3308 28.0192C32.6368 28.3173 32.9428 28.516 33.2487 28.6154C33.4527 28.7147 33.6567 28.8141 33.8607 28.8141C34.1667 28.8141 34.6766 28.516 35.2885 27.9199C36.0025 27.3237 36.9204 26.5288 38.2463 26.5288C39.2662 26.5288 40.0821 27.0256 40.898 27.5224L34.7786 2.1859Z"
+                    fill="#149080"
+                  />
+                  <path
+                    d="M23.9677 53.0571H16.9304C16.2164 53.0571 15.8085 53.5539 15.8085 54.15C15.8085 54.7462 16.3184 55.243 16.9304 55.243H23.9677C24.6816 55.243 25.0896 54.7462 25.0896 54.15C25.1915 53.5539 24.6816 53.0571 23.9677 53.0571Z"
+                    fill="#149080"
+                  />
+                  <path
+                    d="M20.5 28.7141C20.398 28.7141 20.194 28.8135 19.8881 28.9128C19.6841 29.0122 19.4801 29.2109 19.2761 29.3103V32.9865H21.6219V29.4096C21.1119 29.0122 20.704 28.7141 20.5 28.7141Z"
+                    fill="#149080"
+                  />
+                </g>
+              </svg>
+            </a>
+          </li>
+          <li class="goods-list__item">
+            <a class="goods-list__link goods-list__link--block" href="">
+              <p class="goods-list__name">Детские игрушки</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="61"
+                height="61"
+                viewBox="0 0 61 61"
+                fill="none"
+              >
+                <path
+                  opacity="0.5"
+                  d="M0 44.7265L27.8567 61V37.1527L0 20.7769V44.7265ZM52.155 12.6913V15.25C52.155 17.0923 48.5967 18.6275 44.3267 18.6275C39.955 18.6275 36.4983 17.0923 36.4983 15.25V11.0537C36.8033 12.7936 40.1583 14.2265 44.3267 14.2265C48.6983 14.2265 52.155 12.6913 52.155 10.849C52.155 9.00672 48.5967 7.47148 44.3267 7.47148C44.0217 7.47148 43.615 7.47148 43.31 7.47148L38.2267 4.50337V7.67618C38.2267 9.51846 34.6683 11.0537 30.3983 11.0537C27.6533 11.0537 25.315 10.4396 23.8917 9.51846C23.6883 9.31376 23.485 9.10906 23.18 8.90436C22.7733 8.49496 22.57 8.08557 22.57 7.67618V4.60571L17.69 7.47148C17.385 7.47148 16.9783 7.47148 16.5717 7.47148C12.2 7.47148 8.74334 9.00672 8.74334 10.849C8.74334 12.6913 12.3017 14.2265 16.5717 14.2265C20.74 14.2265 24.095 12.7936 24.4 11.0537V15.25C24.4 17.0923 20.8417 18.6275 16.5717 18.6275C12.2 18.6275 8.74334 17.0923 8.74334 15.25V12.7936L2.64334 16.3758L30.6017 32.7517L58.4583 16.4782L52.155 12.6913ZM38.3283 23.1309C38.3283 24.9732 34.77 26.5084 30.5 26.5084C26.1283 26.5084 22.6717 24.9732 22.6717 23.1309V18.9346C22.9767 20.6745 26.3317 22.1074 30.5 22.1074C34.6683 22.1074 38.0233 20.6745 38.3283 18.9346V23.1309ZM33.1433 37.3574V61L61 44.7265V21.0839L33.1433 37.3574ZM30.3983 6.75504C34.77 6.75504 38.2267 5.2198 38.2267 3.37752C38.2267 1.53524 34.6683 0 30.3983 0C26.0267 0 22.57 1.53524 22.57 3.37752C22.57 5.2198 26.0267 6.75504 30.3983 6.75504Z"
+                  fill="#149080"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
       </section>
 
       <!-- Week product -->
@@ -174,16 +181,28 @@
               </p>
               <ul class="week-block__description week-list">
                 <li class="week-list__row">
-                  <span class="week-list__row-description">Цвет:</span>
-                  <span class="week-list__row-meaning">тиффани/серый</span>
+                  <span class="week-list__text week-list__row-description"
+                    >Цвет:</span
+                  >
+                  <span class="week-list__text week-list__row-meaning"
+                    >тиффани/серый</span
+                  >
                 </li>
                 <li class="week-list__row row">
-                  <span class="week-list__row-description">Диаметр:</span>
-                  <span class="week-list__row-meaning">25 см</span>
+                  <span class="week-list__text week-list__row-description"
+                    >Диаметр:</span
+                  >
+                  <span class="week-list__text week-list__row-meaning"
+                    >25 см</span
+                  >
                 </li>
                 <li class="week-list__row row">
-                  <span class="week-list__row-description">Высота:</span>
-                  <span class="week-list__row-meaning">15 см</span>
+                  <span class="week-list__text week-list__row-description"
+                    >Высота:</span
+                  >
+                  <span class="week-list__text week-list__row-meaning"
+                    >15 см</span
+                  >
                 </li>
               </ul>
 
@@ -214,6 +233,7 @@
           <ul class="about__list">
             <li class="about__list-item">
               <svg
+                class="about__list-svg"
                 xmlns="http://www.w3.org/2000/svg"
                 width="33"
                 height="38"
@@ -231,6 +251,7 @@
             </li>
             <li class="about__list-item">
               <svg
+                class="about__list-svg"
                 xmlns="http://www.w3.org/2000/svg"
                 width="47"
                 height="27"
@@ -247,11 +268,12 @@
                 />
               </svg>
               <p class="about__list-description">
-                Скандинавский стиль по российской цене
+                Скандинавский стиль по&nbspроссийской цене
               </p>
             </li>
             <li class="about__list-item">
               <svg
+                class="about__list-svg"
                 xmlns="http://www.w3.org/2000/svg"
                 width="34"
                 height="27"
@@ -264,11 +286,12 @@
                 />
               </svg>
               <p class="about__list-description">
-                Увеличивает лайки на фотографиях
+                Увеличивает лайки на&nbspфотографиях
               </p>
             </li>
             <li class="about__list-item">
               <svg
+                class="about__list-svg"
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"
                 height="34"
@@ -329,11 +352,12 @@
                 />
               </svg>
               <p class="about__list-description">
-                Связано вручную с любовью и умилением
+                Связано вручную с&nbspлюбовью&nbspи&nbspумилением
               </p>
             </li>
             <li class="about__list-item">
               <svg
+                class="about__list-svg"
                 xmlns="http://www.w3.org/2000/svg"
                 width="55"
                 height="23"
@@ -355,6 +379,7 @@
             </li>
             <li class="about__list-item">
               <svg
+                class="about__list-svg"
                 xmlns="http://www.w3.org/2000/svg"
                 width="33"
                 height="32"
@@ -367,7 +392,7 @@
                 />
               </svg>
               <p class="about__list-description">
-                Поставляется в подарочной упаковке
+                Поставляется в&nbspподарочной&nbspупаковке
               </p>
             </li>
           </ul>
@@ -421,7 +446,7 @@
               </svg>
             </button>
           </div>
-          <a class="feedback__block-button" href="">написать</a>
+          <a class="feedback__button" href="">написать</a>
         </div>
       </section>
 
@@ -464,7 +489,7 @@
             <div class="contacts__row">
               <span class="contacts__info contacts__info--adress">адрес:</span>
               <span class="contacts__data"
-                >г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис
+                >г. Санкт-Петербург ул.&nbspБольшая Конюшенная д.&nbsp19/8, офис
                 101</span
               >
             </div>
@@ -473,17 +498,19 @@
 
         <!-- Map -->
         <section class="map">
-          <div class="map__wrapper container">
-            <h3 class="visually-hidden">Мы на карте</h3>
-            <img
-              class="map-footer"
-              src="img/map-mobile.png"
-              alt="Как нас найти на карте."
-            />
-          </div>
+          <h3 class="visually-hidden">Мы на карте</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d881.7489960643993!2d30.321748805834734!3d59.93864839991136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2sus!4v1713056125903!5m2!1sen!2sus"
+            width="600"
+            height="450"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </section>
+
         <!-- Button -->
-        <section class="address-button">
+        <section class="address-button container">
           <a class="address-button__link" href="">напишите нам</a>
         </section>
       </section>
@@ -660,5 +687,6 @@
         </div>
       </section>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

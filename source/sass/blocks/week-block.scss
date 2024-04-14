@@ -1,0 +1,47 @@
+// .week-block {
+//   margin-bottom: 29px;
+// }
+
+.week-block__text {
+  color: #444444;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 28px;
+}
+
+.week-block__image {
+  margin-bottom: 25px;
+}
+
+.week-block__price {
+  display: block;
+  // width: 154px;
+  color: #444444;
+
+  text-align: center;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 25px;
+}
+
+.week-block__button {
+  display: block;
+  // width: 260px;
+  color: #444444;
+  text-decoration: none;
+  cursor: pointer;
+
+  text-align: center;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 14px 68px;
+  border: 2px solid #444444;
+}

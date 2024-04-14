@@ -1,1 +1,57 @@
-// Начните писать стили здесь
+// Basic styles
+
+// Vriables
+@import "base/variables";
+
+// Fonts
+@import "base/fonts";
+
+// Base
+@import "base/base";
+
+// Blocks
+
+// About
+@import "blocks/about";
+
+// Address
+@import "blocks/address";
+
+// Contacts
+@import "blocks/contacts";
+
+// Copyright
+@import "blocks/copyright";
+
+// Examples
+@import "blocks/examples";
+
+// Feedback
+@import "blocks/feedback";
+
+// Goods List
+@import "blocks/goods-list";
+
+// Main Footer
+@import "blocks/main-footer";
+
+// Main Header
+@import "blocks/main-header";
+
+// Main Navigation
+@import "blocks/main-nav";
+
+// Map
+@import "blocks/map";
+
+// Social
+@import "blocks/social";
+
+// Week Block
+@import "blocks/week-block";
+
+// Week List
+@import "blocks/week-list";
+
+// Week Product
+@import "blocks/week-product";
