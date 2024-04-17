@@ -1,20 +1,63 @@
 .week-product {
   margin-bottom: 73px;
   position: relative;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    margin-bottom: 125px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    margin-bottom: 164px;
+  }
 }
 
 .week-product::after {
   content: "";
   position: absolute;
-  bottom: -36px;
+  bottom: -52px;
   left: 0;
   width: 100%;
   height: 6px;
-  background-color: #f1f1f1;
+  background-image: url("../img/zigzag-line.svg");
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    bottom: -60px;
+
+    height: 17px;
+    background-image: url("../img/zigzag-line-tablet.svg");
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    height: 23px;
+    bottom: -85px;
+
+    background-image: url("../img/zigzag-line-desktop.svg");
+  }
 }
 
 .week-product__item-link {
   text-decoration: none;
+}
+
+.week-product__item-box {
+  // Tablet
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 37px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    margin-bottom: 35px;
+    position: relative;
+    padding-top: 61px;
+  }
 }
 
 .week-product__item-title {
@@ -26,6 +69,22 @@
   line-height: 30px;
   margin: 0;
   margin-bottom: 3px;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    width: 450px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    width: 545px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .week-product__item-subtitle {
@@ -39,4 +98,19 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 8px;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    width: 100px;
+    text-align: center;
+    line-height: 17px;
+    margin-top: 6px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 69px;
+    left: -143px;
+  }
 }

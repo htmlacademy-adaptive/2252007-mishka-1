@@ -1,5 +1,15 @@
 .about {
   margin-bottom: 58px;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    margin-bottom: 83px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    margin-bottom: 90px;
+  }
 }
 
 .about__title {
@@ -9,13 +19,53 @@
   font-size: 25px;
   font-weight: 700;
   line-height: 30px;
+  margin: 0;
   margin-bottom: 28px;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    width: 346px;
+    margin-bottom: 41px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    width: 417px;
+    margin-bottom: 39px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .about__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    width: 668px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 57px 70px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    width: 675px;
+    gap: 63px 85px;
+  }
+}
+
+.about__list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .about__list-svg {
@@ -31,4 +81,19 @@
   line-height: 20px;
   margin: 0;
   margin-bottom: 30px;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    // width: 235px;
+
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 0;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }

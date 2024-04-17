@@ -4,10 +4,54 @@
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: 320px 356px;
+  background-color: rgb(250, 250, 250);
   position: relative;
   margin: 0 auto;
   margin-bottom: 31px;
   // display: block;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero-mobile@2x.png");
+    // background-size: 100%;
+  }
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    height: 746px;
+    background-image: url("../img/hero-tablet.png");
+    background-size: 768px 746px;
+    margin-bottom: 71px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-tablet@2x.png");
+      // background-size: 100%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/zigzag-fill.svg");
+    }
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    // margin-bottom: 71px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -17px;
+      left: 0;
+      width: 100%;
+      height: 34px;
+      background-image: url("../img/zigzag-fill-desktop.svg");
+    }
+  }
 }
 
 .examples__title {
@@ -22,6 +66,21 @@
   font-weight: 700;
   line-height: 30px;
   // display: block;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    width: 668px;
+    padding-top: 155px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    width: 700px;
+    margin: 0 auto;
+    padding-top: 158px;
+  }
 }
 
 .examples__list {

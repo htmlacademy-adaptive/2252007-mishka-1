@@ -16,4 +16,30 @@
   font-weight: 700;
   line-height: 18px;
   text-decoration: none;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    padding-top: 8px;
+    position: relative;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    // width: 668px;
+  }
+}
+
+.copyright__link svg {
+  // Tablet
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    // width: 668px;
+  }
 }

@@ -36,7 +36,13 @@ img {
   }
 
   @media (min-width: $desktop-width) {
-    width: 1150px;
+    width: 1050px;
     padding: 0 50px;
+  }
+}
+
+.container__box {
+  @media (min-width: $desktop-width) {
+    margin-left: 175px;
   }
 }

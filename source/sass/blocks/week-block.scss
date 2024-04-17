@@ -1,5 +1,14 @@
-// .week-block {
-//   margin-bottom: 29px;
+.week-block {
+  // Tablet
+  @media (min-width: $tablet-width) {
+    position: relative;
+  }
+}
+
+//   // Desktop
+//   @media (min-width: $desktop-width) {
+//     // width: 668px;
+//   }
 // }
 
 .week-block__text {
@@ -10,15 +19,46 @@
   font-weight: 400;
   line-height: 24px;
   margin-bottom: 28px;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    width: 292px;
+    margin-top: 0;
+    margin-bottom: 45px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    margin-bottom: 60px;
+  }
 }
 
 .week-block__image {
   margin-bottom: 25px;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 334px;
+    height: 404px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    width: 525px;
+    height: 636px;
+    top: -156px;
+    z-index: -1;
+  }
 }
 
 .week-block__price {
   display: block;
-  // width: 154px;
   color: #444444;
 
   text-align: center;
@@ -27,6 +67,21 @@
   font-weight: 700;
   line-height: 24px;
   margin-bottom: 25px;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    margin-left: 57px;
+    margin-bottom: 33px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    // width: 668px;
+  }
 }
 
 .week-block__button {
@@ -44,4 +99,18 @@
   text-transform: uppercase;
   padding: 14px 68px;
   border: 2px solid #444444;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    // width: 116px;
+    width: 120px;
+    margin-left: 0;
+
+    font-size: 17px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    padding: 14px 84px;
+  }
 }

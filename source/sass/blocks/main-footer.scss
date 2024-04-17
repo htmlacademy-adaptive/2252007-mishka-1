@@ -4,4 +4,16 @@
 
 .main-footer__logo {
   display: none;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 102px;
+    height: 34px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    // width: 668px;
+  }
 }

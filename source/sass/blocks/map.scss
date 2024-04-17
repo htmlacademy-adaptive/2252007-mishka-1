@@ -16,4 +16,37 @@
       background-image: url("../img/map-mobile@2x.png");
     }
   }
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/map-tablet.png");
+    background-size: 768px 457px;
+    height: 457px;
+    margin-bottom: 55px;
+
+    iframe {
+      height: 457px;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-tablet@2x.png");
+    }
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 0;
+    right: 213px;
+    background-position: center right;
+    background-size: 527px 457px;
+    // background-size: cover;
+    width: calc(100% - 1000px);
+
+    margin-bottom: 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-desktop@2x.png");
+    }
+  }
 }

@@ -8,13 +8,32 @@
   flex-direction: column;
   flex-wrap: wrap;
 
-  // position: absolute;
-  // bottom: 0;
-  // left: 0;
+  // Tablet
+  @media (min-width: $tablet-width) {
+    width: 668px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 371px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    width: 1050px;
+  }
 }
 
 .goods-list__item {
   background-color: #63d1bb;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    // width: 668px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    width: 525px;
+  }
 }
 
 .goods-list__item:last-child {
@@ -28,6 +47,17 @@
   display: flex;
   justify-content: space-between;
   position: relative;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    width: 334px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    width: 525px;
+  }
 }
 
 .goods-list__name {
@@ -40,16 +70,52 @@
   line-height: 24px;
   margin-top: 24px;
   margin-bottom: 31px;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    width: 131px;
+    margin: 25px 0 34px 36px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    margin: 25px 0 34px 37px;
+  }
 }
 
 .goods-list__link--lamp svg {
   position: absolute;
   top: 23px;
   right: 6px;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    top: 30px;
+    right: 36px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    // width: 668px;
+  }
 }
 
 .goods-list__link--block svg {
   position: absolute;
   top: 21px;
   right: -3px;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    top: 31px;
+    right: 33px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    right: 35px;
+  }
 }
