@@ -35,18 +35,10 @@
 
   // Desktop
   @media (min-width: $desktop-width) {
-    position: absolute;
-    top: 0;
-    right: 213px;
-    background-position: center right;
-    background-size: 527px 457px;
-    // background-size: cover;
-    width: calc(100% - 1000px);
+    display: none;
 
-    margin-bottom: 0;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/map-desktop@2x.png");
+    iframe {
+      // display: none;
     }
   }
 }

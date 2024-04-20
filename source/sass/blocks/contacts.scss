@@ -8,7 +8,7 @@
 
   // Desktop
   @media (min-width: $desktop-width) {
-    margin-bottom: 105px;
+    margin: 0;
   }
 }
 
@@ -20,7 +20,28 @@
 
   // Desktop
   @media (min-width: $desktop-width) {
-    // position: relative;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 50px;
+      background-image: url("../img/map-desktop.png");
+      background-size: 527px 457px;
+      background-repeat: no-repeat;
+      height: 457px;
+      width: 527px;
+      background-position: center right;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-desktop@2x.png");
+    }
+
+    iframe::after {
+      height: 527px;
+    }
   }
 }
 
