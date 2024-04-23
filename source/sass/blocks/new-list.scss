@@ -1,0 +1,16 @@
+.new-list {
+  display: none;
+  margin: 0;
+  padding: 0;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    // width: 348px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    // width: 1050px;
+    // margin: 0 auto;
+  }
+}

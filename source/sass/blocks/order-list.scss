@@ -1,0 +1,43 @@
+.order-list {
+  margin: 0;
+  padding: 0;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    width: 335px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    // width: 1050px;
+    // margin: 0 auto;
+  }
+}
+
+.order-list__item {
+  // Tablet
+  @media (min-width: $tablet-width) {
+    width: 153px;
+    margin-top: 21px;
+    z-index: 2;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    // width: 1050px;
+    // margin: 0 auto;
+  }
+}
+
+.order-list__item-link {
+  text-decoration: none;
+
+  color: #000000;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
+}

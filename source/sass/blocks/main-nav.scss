@@ -7,18 +7,12 @@
 
   // Tablet
   @media (min-width: $tablet-width) {
-    flex-direction: row;
-    justify-content: space-between;
+    // flex-direction: row;
+    // justify-content: space-between;
+    display: grid;
+    grid-template-columns: 320px 348px;
   }
 
-  // Desktop
-  @media (min-width: $desktop-width) {
-    // width: 1050px;
-    // margin: 0 auto;
-  }
-}
-
-.main-nav__item {
   // Desktop
   @media (min-width: $desktop-width) {
     // width: 1050px;
@@ -27,44 +21,105 @@
 }
 
 .main-nav__item-list {
-  // width: 1050px;
+  list-style: none;
 }
 
-.main-nav__logo {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 18px;
-  width: 86px;
-  height: 35px;
+.main-nav__item--new {
+  display: none;
+}
 
+.main-nav__item--delivery {
+  z-index: 2;
+}
+
+.main-nav__item--delivery span {
   // Tablet
   @media (min-width: $tablet-width) {
-    margin: 0;
+    display: block;
+    width: 259px;
+    margin-top: 21px;
+    margin-left: 89px;
+
+    color: #444444;
+    text-align: right;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
   }
 
   // Desktop
   @media (min-width: $desktop-width) {
-    // max-width: 1050px;
+    // width: 1050px;
   }
 }
+// .main-nav {
+//   margin: 0;
+//   padding: 0;
+//   list-style: none;
+//   display: flex;
+//   flex-direction: column;
 
-.main-nav__logo-image {
-  // margin: 0 auto;
-  width: 86px;
-  height: 35px;
-  display: block;
+//   // Tablet
+//   @media (min-width: $tablet-width) {
+//     flex-direction: row;
+//     justify-content: space-between;
+//   }
 
-  // Tablet
-  @media (min-width: $tablet-width) {
-    width: 113px;
-    height: 46px;
-  }
+//   // Desktop
+//   @media (min-width: $desktop-width) {
+//     // width: 1050px;
+//     // margin: 0 auto;
+//   }
+// }
 
-  // Desktop
-  @media (min-width: $desktop-width) {
-    // max-width: 1050px;
-  }
-}
+// .main-nav__item {
+//   // Desktop
+//   @media (min-width: $desktop-width) {
+//     // width: 1050px;
+//     // margin: 0 auto;
+//   }
+// }
+
+// .main-nav__item-list {
+//   // width: 1050px;
+// }
+
+// .main-nav__logo {
+//   display: block;
+//   margin: 0 auto;
+//   margin-bottom: 18px;
+//   width: 86px;
+//   height: 35px;
+
+//   // Tablet
+//   @media (min-width: $tablet-width) {
+//     margin: 0;
+//   }
+
+//   // Desktop
+//   @media (min-width: $desktop-width) {
+//     // max-width: 1050px;
+//   }
+// }
+
+// .main-nav__logo-image {
+//   // margin: 0 auto;
+//   width: 86px;
+//   height: 35px;
+//   display: block;
+
+//   // Tablet
+//   @media (min-width: $tablet-width) {
+//     width: 113px;
+//     height: 46px;
+//   }
+
+//   // Desktop
+//   @media (min-width: $desktop-width) {
+//     // max-width: 1050px;
+//   }
+// }
 
 // Button + JS menu
 

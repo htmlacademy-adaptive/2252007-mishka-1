@@ -1,0 +1,25 @@
+.logo {
+  // Tablet
+  @media (min-width: $tablet-width) {
+    margin-bottom: 15px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    // width: 1050px;
+  }
+}
+
+.logo-link {
+  // Tablet
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 113px;
+    height: 46px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    // width: 1050px;
+  }
+}
