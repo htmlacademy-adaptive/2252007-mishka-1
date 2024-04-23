@@ -27,7 +27,7 @@
     position: absolute;
     top: -40px;
     left: 0;
-    height: 100px;
+    height: 300px;
     width: 1px;
     background-color: #ececec;
   }
@@ -76,9 +76,10 @@
     text-decoration: none;
     // padding-left: 34px;
     // padding-top: 3px;
+    // padding: 36px 34px 34px 34px;
 
     color: #000000;
-    text-align: right;
+    // text-align: right;
     font-family: "Open Sans", "Arial", sans-serif;
     font-size: 17px;
     font-weight: 700;
@@ -94,7 +95,7 @@
 .cart-list__item-link--search {
   // Tablet
   @media (min-width: $tablet-width) {
-    padding: 3px 34px 0 34px;
+    padding: 36px 34px 34px 34px;
   }
 
   // Desktop
@@ -103,10 +104,16 @@
   }
 }
 
+.cart-list__item-link--cart {
+  display: inline-block;
+  width: 234px;
+  padding: 0 0 34px 33px;
+}
+
 .cart-list__item-link--cart svg {
   // Tablet
   @media (min-width: $tablet-width) {
-    padding-right: 31px;
+    margin-right: 31px;
   }
 
   // Desktop
