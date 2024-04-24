@@ -4,16 +4,16 @@
 
   // Tablet
   @media (min-width: $tablet-width) {
-    margin: 0 auto;
+    padding-top: 0;
     // width: 668px;
     margin-bottom: -46px;
   }
 
   // Desktop
   @media (min-width: $desktop-width) {
-    padding-top: 9px;
-    margin-bottom: -47px;
     width: 1050px;
+    margin: 0 auto;
+    margin-bottom: -67px;
   }
 }
 

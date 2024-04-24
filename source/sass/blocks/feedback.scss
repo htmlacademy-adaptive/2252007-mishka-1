@@ -55,9 +55,25 @@
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/feedback-tablet@2x.png");
-        // background-size: 100%;
       }
     }
+  }
+}
+
+.feedback__wrapper-box {
+  // Tablet
+  @media (min-width: $tablet-width) {
+    padding-top: 83px;
+    display: grid;
+    grid-template-columns: 493px 175px;
+    // grid-template-rows: 52px 221px 105px;
+    // grid-template-rows: repeat(3, auto);
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    padding-top: 78px;
+    grid-template-columns: 700px 175px;
   }
 }
 
@@ -75,7 +91,7 @@
     width: 209px;
     margin-top: 0;
     margin-bottom: 39px;
-    padding-top: 83px;
+    // padding-top: 83px;
 
     font-size: 43px;
     line-height: 50px;
@@ -84,7 +100,7 @@
   // Desktop
   @media (min-width: $desktop-width) {
     width: 248px;
-    padding-top: 78px;
+    // padding-top: 78px;
     margin-bottom: 35px;
 
     font-size: 53px;
@@ -103,10 +119,15 @@
 
   // Tablet
   @media (min-width: $tablet-width) {
-    margin-bottom: 61px;
-
     font-size: 17px;
     line-height: 30px;
+
+    order: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: 0;
+    padding-top: 40px;
+    margin-bottom: 61px;
   }
 
   // Desktop
@@ -126,6 +147,8 @@
     width: 284px;
     padding-bottom: 47px;
     margin: 0;
+
+    order: 3;
   }
 
   // Desktop
@@ -219,12 +242,12 @@
   // Tablet
   @media (min-width: $tablet-width) {
     width: 123px;
-    position: absolute;
-    right: 50px;
-    top: 85px;
+    // position: absolute;
 
     font-size: 17px;
     padding: 14px 24px;
+
+    order: 1;
   }
 
   // Desktop
