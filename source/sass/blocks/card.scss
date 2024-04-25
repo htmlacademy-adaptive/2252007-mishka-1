@@ -64,6 +64,7 @@
   // Desktop
   @media (min-width: $desktop-width) {
     padding: 27px 32px 26px 28px;
+    flex-grow: 1;
   }
 }
 
@@ -73,7 +74,8 @@
 
   // Tablet
   @media (min-width: $tablet-width) {
-    margin-bottom: 24px;
+    // margin-bottom: 24px;
+    border-bottom: none;
   }
 
   // Desktop
@@ -131,6 +133,17 @@
 .card__buy {
   display: flex;
   justify-content: space-between;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    padding-top: 24px;
+    border-top: 1px solid #ececec;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    // border: none;
+  }
 }
 
 .card__buy-price {

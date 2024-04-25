@@ -242,10 +242,9 @@
   // Tablet
   @media (min-width: $tablet-width) {
     width: 123px;
-    // position: absolute;
-
     font-size: 17px;
     padding: 14px 24px;
+    align-self: flex-start;
 
     order: 1;
   }
