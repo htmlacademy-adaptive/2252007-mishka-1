@@ -16,6 +16,8 @@
 
   // Tablet
   @media (min-width: $tablet-width) {
+    // display: flex;
+    // flex-direction: column;
     height: 746px;
     background-image: url("../img/hero-tablet.png");
     background-size: 768px 746px;
