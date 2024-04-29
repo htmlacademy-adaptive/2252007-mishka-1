@@ -3,6 +3,7 @@
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 
   // display: grid;
@@ -20,6 +21,11 @@
     display: grid;
     grid-template-columns: 405px 295px 350px;
   }
+}
+
+.main-nav__item {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .main-nav__item-list {

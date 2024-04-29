@@ -1,14 +1,15 @@
 .examples {
-  height: 489px;
+  // height: 489px;
   background-image: url("../img/hero-mobile.png");
   background-repeat: no-repeat;
-  background-position: center 0;
+  // background-position: center 0;
   background-size: 320px 356px;
   background-color: rgb(250, 250, 250);
   position: relative;
   margin: 0 auto;
   margin-bottom: 31px;
   z-index: 1;
+  background-position: center bottom;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/hero-mobile@2x.png");
@@ -18,7 +19,7 @@
   @media (min-width: $tablet-width) {
     // display: flex;
     // flex-direction: column;
-    height: 746px;
+    // height: 746px;
     background-image: url("../img/hero-tablet.png");
     background-size: 768px 746px;
     margin-bottom: 71px;
@@ -30,7 +31,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: -1px;
+      top: -31px;
       left: 0;
       width: 100%;
       height: 1px;
@@ -45,6 +46,7 @@
       width: 100%;
       height: 24px;
       background-image: url("../img/zigzag-fill.svg");
+      // border: none;
     }
   }
 
