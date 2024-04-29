@@ -1,0 +1,93 @@
+.examples {
+  // height: 489px;
+  background-image: url("../img/hero-mobile.png");
+  background-repeat: no-repeat;
+  // background-position: center 0;
+  background-size: 320px 356px;
+  background-color: rgb(250, 250, 250);
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 31px;
+  z-index: 1;
+  background-position: center bottom;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero-mobile@2x.png");
+  }
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    // display: flex;
+    // flex-direction: column;
+    // height: 746px;
+    background-image: url("../img/hero-tablet.png");
+    background-size: 768px 746px;
+    margin-bottom: 71px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-tablet@2x.png");
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -31px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/zigzag-fill.svg");
+      // border: none;
+    }
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -17px;
+      left: 0;
+      width: 100%;
+      height: 34px;
+      background-image: url("../img/zigzag-fill-desktop.svg");
+    }
+  }
+}
+
+.examples__title {
+  width: 260px;
+  color: #000000;
+  margin: 0;
+  padding-top: 73px;
+
+  text-align: center;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    width: 668px;
+    padding-top: 155px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    width: 700px;
+    margin: 0 auto;
+    padding-top: 158px;
+  }
+}

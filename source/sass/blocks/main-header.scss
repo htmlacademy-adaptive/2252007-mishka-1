@@ -1,0 +1,22 @@
+.main-header {
+  position: relative;
+  padding-top: 27px;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    // width: 668px;
+    margin-bottom: -46px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    width: 1050px;
+    margin: 0 auto;
+    margin-bottom: -67px;
+  }
+}
+
+// .main-header__wrapper {
+//   position: relative;
+// }

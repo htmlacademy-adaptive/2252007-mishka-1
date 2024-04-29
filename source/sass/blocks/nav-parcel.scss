@@ -1,0 +1,37 @@
+.nav-parcel {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    width: 348px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    // width: 1050px;
+  }
+}
+
+.nav-parcel__item--delivery {
+  display: none;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 259px;
+    padding-left: 89px;
+    padding-top: 20px;
+    z-index: 2;
+
+    color: #444444;
+    text-align: right;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}

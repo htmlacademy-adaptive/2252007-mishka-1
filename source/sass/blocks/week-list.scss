@@ -1,0 +1,66 @@
+.week-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 112px;
+  margin-bottom: 29px;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    width: 292px;
+    margin-bottom: 57px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    margin-bottom: 109px;
+  }
+}
+
+.week-list__row {
+  display: flex;
+  justify-content: space-between;
+  height: 32px;
+  border-bottom: 1px solid #ececec;
+  margin-top: 7px;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    // width: 292px;
+    // margin-bottom: 57px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    // width: 668px;
+  }
+}
+
+.week-list__row:first-child {
+  margin-top: 0;
+}
+
+.week-list__text {
+  color: #444444;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    width: 97px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    // width: 668px;
+  }
+}
+
+.week-list__row-meaning {
+  width: 162px;
+  text-align: left;
+}

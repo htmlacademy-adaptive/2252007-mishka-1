@@ -1,0 +1,45 @@
+// .copyright {
+// }
+
+.copyright__link {
+  width: 184px;
+  padding-top: 22px;
+  padding-bottom: 24px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  color: #000000;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 18px;
+  text-decoration: none;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    padding-top: 8px;
+    position: relative;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    // width: 668px;
+  }
+}
+
+.copyright__link svg {
+  // Tablet
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    // width: 668px;
+  }
+}

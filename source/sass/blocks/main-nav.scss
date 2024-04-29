@@ -1,0 +1,250 @@
+.main-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  // display: grid;
+  // grid-template-columns: calc(50% - 14px) calc(50% + 14px);
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 405px 295px 350px;
+  }
+}
+
+.main-nav__item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-nav__item-list {
+  list-style: none;
+}
+
+.main-nav__item--new {
+  display: none;
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    display: block;
+    order: 3;
+    z-index: 2;
+    background-color: #fafafa;
+  }
+}
+
+.main-nav__item--cart {
+  order: 1;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    width: 348px;
+    margin-right: auto;
+    order: 0;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    order: 2;
+  }
+}
+
+.main-nav__item--order,
+.main-nav__item--delivery {
+  // Tablet
+  @media (min-width: $tablet-width) {
+    background-color: #fafafa;
+    z-index: 2;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    // width: 1050px;
+  }
+}
+
+.main-nav__item--order {
+  // Desktop
+  @media (min-width: $desktop-width) {
+    background-color: transparent;
+    border-top: none;
+  }
+}
+
+.main-nav__item--order-catalog,
+.main-nav__item--delivery-catalog,
+.main-nav__item--order-form,
+.main-nav__item--delivery-form {
+  // Tablet
+  @media (min-width: $tablet-width) {
+    background-color: #f1f1f1;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    // width: 1050px;
+  }
+}
+
+.main-nav__item--order-catalog,
+.main-nav__item--order-form {
+  // Desktop
+  @media (min-width: $desktop-width) {
+    background-color: #ffffff;
+  }
+}
+
+.main-nav__item--new-catalog,
+.main-nav__item--new-form {
+  // Desktop
+  @media (min-width: $desktop-width) {
+    background-color: #f1f1f1;
+  }
+}
+
+.main-nav__item--order-form {
+  // background-color: #f1f1f1;
+}
+
+.main-nav__item--delivery {
+  order: 2;
+  border-top: none;
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    order: 5;
+    grid-column-start: 3;
+  }
+}
+
+.main-nav__item--delivery span {
+  display: none;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 348px;
+    margin-top: 21px;
+    margin-bottom: 20px;
+
+    color: #444444;
+    text-align: right;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    // width: 1050px;
+  }
+}
+
+// Button + JS menu
+.main-nav__item--logo {
+  position: relative;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    order: 0;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    order: 1;
+  }
+}
+
+.main-nav__toggle {
+  display: none;
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav__toggle {
+    position: absolute;
+    top: 0;
+    right: 1px;
+    display: block;
+    width: 20px;
+    height: 14px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+
+    &--nojs {
+      display: none;
+    }
+
+    &--closed::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      right: 0;
+      width: 25px;
+      height: 2px;
+      background-color: #231f20;
+      box-shadow: 0 8px 0 0 #231f20, 0 16px 0 0 #231f20;
+    }
+
+    &--opened {
+      top: 19px;
+      right: 26px;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 18px;
+        right: 1px;
+        width: 24px;
+        height: 2px;
+        background-color: #231f20;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+        box-shadow: none;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.main-nav__list--opened {
+  position: absolute;
+  top: 66px;
+  z-index: 5;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.main-nav__list--closed {
+  display: none;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.main-nav__list--nojs {
+  display: block;
+}

@@ -1,0 +1,29 @@
+.nav-box {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  // Tablet
+  @media (min-width: $tablet-width) {
+    // width: 1050px;
+  }
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    width: 700px;
+  }
+}
+
+.nav-box__item {
+  margin: 0;
+}
+
+.nav-box__item--new {
+  display: none;
+
+  // Desktop
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 405px;
+  }
+}
